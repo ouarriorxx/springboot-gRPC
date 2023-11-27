@@ -127,7 +127,7 @@ public interface StagiaireRepository extends JpaRepository<Stagiaire, Id> {
 }
 
 # 5. Mapper gRPC Stagiaire avec JPA Stagiaire
-
+'
 @Component
 public class StagiaireMapper {
     public com.a00n.grpc.stubs.StagiaireOuterClass.Stagiaire toGrpcStagiaire(Stagiaire stagiaire) {
@@ -137,7 +137,7 @@ public class StagiaireMapper {
                 .setAge(student.getMoisdebut())
                 .build();
     }
-
+'
     public Stagiaire fromGrpcStagiaire(com.a00n.grpc.stubs.StagiaireOuterClass.Stagiaire stagiaire) {
         return new Stagiaire(stagiaire.getId(), stagiaire.getNom(), stagiaire.getPrenom(), stagiaire.getMoisdebut());
     }
