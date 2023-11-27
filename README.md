@@ -99,7 +99,7 @@ service StudentService {
 }
 
 message ListStagiairesResponse { repeated Stagiaire stagiaires = 1; }
-message GetStudentRequest { int id = 1; }
+message GetStagiaireRequest { int id = 1; }
 message DeleteStagiaireRequest { int id = 1; }
 message DeleteStagiaireResponse { string message = 1; }
 message CreateStagiaireRequest {
@@ -123,7 +123,7 @@ public class Stagiaire {
 }
 
 @Repository
-public interface StudentRepository extends JpaRepository<Student, Long> {
+public interface StagiaireRepository extends JpaRepository<Stagiaire, Id> {
 }
 
 # 5. Mapper gRPC Stagiaire avec JPA Stagiaire
