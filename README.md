@@ -10,15 +10,15 @@ Initialisation du Projet Spring Boot
 Incluez les propriétés et les dépendances Maven suivantes dans votre fichier pom.xml :
 
 
-<!-- Versions des Propriétés -->
+<!-- Versions des Propriétés 
 <properties>
     <protobuf.version>3.23.4</protobuf.version>
     <protobuf-plugin.version>0.6.1</protobuf-plugin.version>
     <grpc.version>1.58.0</grpc.version>
 </properties>
-
+-->
 <!-- Dépendances -->
-<dependency>
+<!-- <dependency>
     <groupId>io.grpc</groupId>
     <artifactId>grpc-stub</artifactId>
     <version>${grpc.version}</version>
@@ -39,8 +39,8 @@ Incluez les propriétés et les dépendances Maven suivantes dans votre fichier 
     <artifactId>grpc-spring-boot-starter</artifactId>
     <version>2.15.0.RELEASE</version>
 </dependency>
-
-<!-- Plugin pour les Buffers de Protocole -->
+-->
+<!-- Plugin pour les Buffers de Protocole 
 <<plugin>
     <groupId>com.github.os72</groupId>
     <artifactId>protoc-jar-maven-plugin</artifactId>
@@ -71,14 +71,14 @@ Incluez les propriétés et les dépendances Maven suivantes dans votre fichier 
         </execution>
     </executions>
 </plugin>
-
+-->
 ## 3. Créer les Définitions de Service gRPC
 
 Définissez votre service gRPC dans les fichiers .proto à l'intérieur du répertoire src/main/resources.
 
 Exemple de stagiaire.proto :
 
-
+<!--
 syntax = "proto3";
 option java_package = "com.a00n.grpc.stubs"; // replace this with your_package_name_gprc.stubs 
 
@@ -107,9 +107,11 @@ message CreateStagiaireRequest {
   string prenom = 2;
   int moisdebut = 3;
 }
-
+-->
 
 ## 4. Créer une Entité JPA pour Stagiaire
+
+<!--
 @Entity
 @Data
 public class Stagiaire {
@@ -144,7 +146,7 @@ public class StagiaireMapper {
 }
 
 ## 6. Implémenter le Service
-
+<!--
 @Component
 public class StagiaireMapper {
     public com.a00n.grpc.stubs.StagiaireOuterClass.Stagiaire toGrpcStagiaire(Stagiaire stagiaire) {
@@ -158,7 +160,7 @@ public class StagiaireMapper {
     public Stagiaire fromGrpcStagiaire(com.a00n.grpc.stubs.StagiaireOuterClassStagiaire stagiaire) {
         return new Stagiaire(stagiaire.getId(), stagiaire.getFirstNom(), stagiaire.getPrenom(), stagiaire.getMoisdebut());
     }
-}
+} -->
 java
 Copy code
 // Classe GrpcStagiaireServiceImpl
