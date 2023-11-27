@@ -1,12 +1,12 @@
 # springboot-gRPC
-Configuration du Serveur
+# Configuration du Serveur
 
-# 1. Créer un Projet Spring Boot
+## 1. Créer un Projet Spring Boot
 Utilisez Spring Initializr ou toute autre méthode préférée pour créer un projet Spring Boot.
 
 Initialisation du Projet Spring Boot
 
-# 2. Ajouter les Dépendances Maven
+## 2. Ajouter les Dépendances Maven
 Incluez les propriétés et les dépendances Maven suivantes dans votre fichier pom.xml :
 
 
@@ -72,7 +72,7 @@ Incluez les propriétés et les dépendances Maven suivantes dans votre fichier 
     </executions>
 </plugin>
 
-# 3. Créer les Définitions de Service gRPC
+## 3. Créer les Définitions de Service gRPC
 
 Définissez votre service gRPC dans les fichiers .proto à l'intérieur du répertoire src/main/resources.
 
@@ -109,7 +109,7 @@ message CreateStagiaireRequest {
 }
 
 
-# 4. Créer une Entité JPA pour Stagiaire
+## 4. Créer une Entité JPA pour Stagiaire
 @Entity
 @Data
 public class Stagiaire {
@@ -126,7 +126,7 @@ public class Stagiaire {
 public interface StagiaireRepository extends JpaRepository<Stagiaire, Id> {
 }
 
-# 5. Mapper gRPC Stagiaire avec JPA Stagiaire
+## 5. Mapper gRPC Stagiaire avec JPA Stagiaire
 '
 @Component
 public class StagiaireMapper {
@@ -143,7 +143,7 @@ public class StagiaireMapper {
     }
 }
 
-# 6. Implémenter le Service
+## 6. Implémenter le Service
 
 @Component
 public class StagiaireMapper {
@@ -162,7 +162,8 @@ public class StagiaireMapper {
 java
 Copy code
 // Classe GrpcStagiaireServiceImpl
-7. Configuration du Serveur
+
+## 7. Configuration du Serveur
 Ajoutez les propriétés nécessaires à application.properties pour la configuration de la base de données.
 
 properties
