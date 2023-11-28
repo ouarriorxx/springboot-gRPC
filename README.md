@@ -1,6 +1,6 @@
 # gRPC avec Spring Boot
 
-# Description
+# principe du projet
 Dans ce projet, nous développons une application gRPC Spring Boot avec des composants serveur et client. L'objectif principal est de mettre en œuvre des opérations CRUD (Créer, Lire, Mettre à jour, Supprimer) pour la gestion des Stagiaires. L'application permettra des fonctionnalités telles que l'ajout de nouveaux Stagiaires, la suppression, la mise à jour des informations sur les Stagiaires et la récupération d'une liste des Stagiaires. Nous exploiterons également la programmation réactive pour récupérer et afficher efficacement une liste d'étudiants utilisant des flux.
 Configuration du serveur
 pour configurer le serveur il faut suivez les étapes suivantes
