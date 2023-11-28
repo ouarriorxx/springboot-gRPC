@@ -174,7 +174,9 @@ public class StagiaireMapper {
     }
 }
 # Implémentation du service
-Le protoc-jar-maven-pluginplugin génère une classe pour chacun de vos services grpc. Par exemple : MyServiceGrpcoù MyService est le nom du service grpc dans le fichier proto. Cette classe contient à la fois les stubs client et le serveur ImplBaseque vous devrez étendre.
+Le protoc-jar-maven-pluginplugin génère une classe pour chacun de vos services grpc. 
+Par exemple : MyServiceGrpcoù MyService est le nom du service grpc dans le fichier proto. 
+Cette classe contient à la fois les stubs client et le serveur ImplBaseque vous devrez étendre.
 
 Après cela, vous n'avez que quatre tâches à accomplir :
 
