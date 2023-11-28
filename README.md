@@ -411,7 +411,7 @@ courirmvn clean install
 Veuillez noter que le colis grpc.studsa été généré. À l'intérieur de ce package, vous devriez trouver deux fichiers Java : StudentOutClassetStudentServiceGrpc
 
 # Créer une entite
-# Créez un projet pour Stagiaire.
+ Créez un projet pour Stagiaire.
 public class Stagiaire {
     
     private int id;
